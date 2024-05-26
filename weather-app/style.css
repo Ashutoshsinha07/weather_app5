@@ -15,7 +15,7 @@ body {
 
 .card {
   width: 90%;
-  max-width: 29.375rem;
+  max-width: 80%;
   background: linear-gradient(135deg, #1e3c72, #2a5298, #4a69bd);
   color: #fff;
   margin: 6.25rem auto 0;
@@ -44,18 +44,25 @@ body {
   font-size: 1.125rem;
 }
 
-.search-box button {
+.search-box .btn {
   border: 0;
   outline: 0;
   background: #ebfffc;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.8125rem;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    scale: 0.95;
+  }
 }
 
-.search button img {
-  width: 1rem;
+.search-box .btn img {
+  width: 30px;
 }
 
 .weather-icon {
@@ -68,24 +75,27 @@ body {
   font-weight: 400;
 }
 
-.details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.25rem;
-  margin-top: 3.125rem;
-}
-
 .col {
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
+
+  & .d {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    & p{
+      font-size: 1.6rem;
+    }
+  }
 }
 
-.col img {
+.col .d img {
   width: 2.5rem;
-  margin-right: 0.625rem;
 }
 
 .humidity,
@@ -94,20 +104,14 @@ body {
   margin-top: -0.375rem;
 }
 
-.humidity {
-  margin-right: 1.25rem;
-}
-
-.wind {
-  margin-left: 1.25rem;
-}
 .weather {
   display: none;
 }
 .error {
-  text-align: left;
+  text-align: center;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 25px;
   margin-top: 10px;
-  display: none !important;
+  display: none;
+  color: red;
 }
